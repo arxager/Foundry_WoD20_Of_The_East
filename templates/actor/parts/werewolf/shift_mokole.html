@@ -65,7 +65,7 @@
                     </div>
                 {{/if}}
 
-                {{#if (eq data.system.tribe "Ora")}}
+                {{#if (or (eq data.system.tribe "Ora") (eq (lower data.system.tribe) "ora"))}}
                     <div class="pullLeft shape-selectortext shape-mokole {{#if (shifterHasForm actor 'lupus')}}text-focus{{else}}text-unfocus{{/if}}">
                         {{localize "wod.attributes.short.sta"}} (+2)<br />
                         {{localize "wod.attributes.short.man"}} (-4)
